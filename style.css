@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+}
+
+.wrapper {
+    padding: 15px;
+    background: #fff;
+    max-width: 550px;
+    border-radius: 10px;
+    margin: 10px;
+
+    /* Adding Styling For Invisible */
+    display: none;
+    pointer-events: none;
+    transform: scale(0);
+    opacity: 0;
+
+    /* Some smooth effect */
+    transition: 0.4s linear;
+}
+
+.wrapper .header {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.wrapper p {
+    padding-left: 20px;
+    margin-top: 20px;
+} 
+
+.btn {
+    padding: 10px 40px;
+    background: #0e46ff;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    margin-left: 20px;
+
+    /*  */
+}
+
+.openBtn {
+    padding: 12px 40px;
+    background: #0e46ff;
+    color: #fff;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+
+    cursor: pointer;
+}
+
+/* Javascript CSS Stylings */
+
+/* it says that when we add modal-visible class to the wrapper apply this css stylings */
+.wrapper.modal-visible {
+    display: block;
+    pointer-events: all;
+    transform: scale(1);
+    opacity: 1;
+    transition: 0.4s linear;
+}
+.openBtn.btn-invisible {
+    opacity: 0;
+    display: none;
+    transition: 0.4s linear;
+}

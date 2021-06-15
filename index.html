@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <button class="openBtn">Open Modal</button>
+    
+    <div class="wrapper">
+        <h2 class="header">Popup Modal Using Html, CSS & JS</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, distinctio quos minima consequuntur quidem commodi eum cumque eaque assumenda? Corporis, quibusdam eaque quaerat quae vel quia.</p>
+
+        <button class="btn">Close</button>
+    </div>
+
+    <script>
+
+        const modalBox = document.querySelector('.wrapper');
+        const openBtn = document.querySelector('.openBtn');
+
+        const closeBtn = document.querySelector('.btn');
+
+        openBtn.addEventListener('click', () => {
+            modalBox.classList.add('modal-visible');
+            openBtn.classList.add('btn-invisible');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modalBox.classList.remove('modal-visible');
+            openBtn.classList.remove('btn-invisible');
+        })
+
+    </script>
+
+</body>
+</html>
